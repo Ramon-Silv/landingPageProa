@@ -1,0 +1,423 @@
+/*RESETAR AS CONFIGURAÇÕES*/
+*{
+    padding: 0;
+    margin: 0;
+    border: 0;
+    font-family: 'Sarala';
+}
+
+/*IMPORTAÇÃO DA FONTE*/
+@font-face {
+    font-family: 'Sarala';
+    src: url(fonte/Sarala-Regular.ttf);
+}
+
+/*MEDIA QUERY*/
+@media screen and (max-width: 790px) {
+    #container_conteudo{
+        width: 272px;
+        height: 288px;
+    }
+    #container_conteudo>img{
+        display: none;
+    }
+    video{
+        margin: 0;
+    }
+    #menu li{
+        display: none;
+    }
+    #body_header img{
+        margin: auto;
+    }
+}
+
+/*DESIGIN DO HEADER*/
+#body_header{
+    background-color: #d9d9d9;
+    width: 100%;    
+    height: 60px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+}
+
+#logo{
+    width: 314px;
+    height: 38px;
+    margin-left: 30px;
+}
+
+#menu{
+    display: flex;
+    flex-direction: row;
+    list-style: none;
+    font-weight: bold;
+    font-size: 24px; 
+    margin-right: 30px;
+}
+
+.item_menu a{
+    color: #1D0466;
+    padding: 0 9px;
+    text-decoration: none;
+}
+
+/*DESIGN DO CORPO*/
+body{
+    width: 100%;
+    height: 100%;
+    margin: auto;
+}
+
+/*DESIGN DA MAIN*/
+main {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-evenly;
+    flex-wrap: wrap-reverse;
+    background-color: #fff;
+    height: 20%;
+    width: 100%;
+    margin: 110px 0;
+}
+
+video{
+    width: 50%;
+    height: 370px;
+    border-radius: 30px;
+    margin-right: 20px;
+}
+
+#container_conteudo{
+    display: flex;
+    flex-direction: column;
+    width: 300px;
+    height: 300px;
+}
+
+#container_conteudo>p{
+    text-align: left;
+    font-size: 20px;
+    color: #060b30;
+    font-weight: bold;
+    width: 272px;
+    height: 288px;
+}
+
+#container_conteudo>img{
+    width: 90px;
+    height: 20px;
+}
+
+/*DESIGN DE SERVIÇOS*/
+#servicos{
+    background-image: linear-gradient(103.95deg, #1C1F3A 0%, #060B30 0.01%, #1D0466 147.12%);
+    width: 100%;
+    height: 20%;
+}
+
+#servicos header{
+    display: flex;
+    justify-content: center;
+}
+
+#servicos h2{
+    font-size: 30px;
+    width: 154px;
+    text-align: center;
+    color:white;
+    border-bottom: 3px solid #fff;
+    padding-top: 20px;
+    font-weight: bold;
+}
+
+#servicos div{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    width: 55%;
+    margin: auto;
+}
+
+figure{
+    height:165px;
+    width:160px;
+    margin: auto;      
+}
+
+figure a{
+    margin:auto;
+}
+
+figure a img{
+    transition: 0.4s ease-in;
+}
+
+figure:hover a img{
+    transition: 0.4s ease-in;
+    transform: scale(1.5);
+}
+
+figure:hover figcaption{
+    transition: 0.4s ease-in;
+    transform: scale(1.2);
+    margin-top: 20px;
+}
+
+figcaption{
+    text-align: center;
+    color: #fff;
+    font-weight: bold;
+    margin:auto;
+    transition: 0.4s ease-in;
+}   
+
+#primeiro{
+    height: 90px; 
+    width: 90px;
+    margin-top:20px;
+    margin-left:40px;
+}
+
+#segundo{
+    height: 90px; 
+    width: 90px;
+    margin-top:20px;
+    margin-left:40px; 
+}  
+#terceiro{
+    height: 90px; 
+    width: 90px;
+    margin-top:20px;
+    margin-left:40px; 
+}
+    
+#quarto{
+    height: 90px; 
+    width: 90px;
+    margin-top:20px;
+    margin-left:40px; 
+}
+
+#quinto{
+    height: 90px; 
+    width: 90px;
+    margin-top:20px;
+    margin-left:40px; 
+}
+
+#sexto{
+    height: 90px; 
+    width: 90px;
+    margin-top:20px;
+    margin-left:40px; 
+}
+
+#setimo{
+    height: 90px; 
+    width: 90px;
+    margin-top:20px;
+    margin-left:40px; 
+}
+    
+#oitavo{
+    height: 90px; 
+    width: 90px;
+    margin-top:20px;
+    margin-left:40px; 
+}
+    
+#nono{
+    height: 90px; 
+    width: 90px;
+    margin-top:20px;
+    margin-left:40px; 
+}
+  
+#decimo{
+    height: 90px; 
+    width: 90px;
+    margin-top:20px;
+    margin-left:40px; 
+}
+               
+#decimo_primeiro{
+    height: 90px; 
+    width: 90px;
+    margin-top:20px;
+    margin-left:40px; 
+}
+    
+#decimo_segundo{
+    height: 90px; 
+    width: 80px;
+    margin-top:20px;
+    margin-left:40px; 
+}
+
+/*DESIGN DE CONSULTAS*/
+#consultas{
+    height: 20%;
+    width: 100%;
+    margin: auto;
+    background-color: #fff;
+    display: flex;
+    flex-direction: column;
+}
+
+#consultas header{
+    display: flex;
+    justify-content: center;
+    margin-bottom: 20px;    
+}
+
+#consultas h2{
+    font-size: 30px;
+    width: 154px;
+    text-align: center;
+    border-bottom: 3px solid #060b30;
+    color: #060b30; 
+    padding-top: 20px;
+    font-weight: bold;
+}
+
+.container{
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+    justify-content: center;
+    margin-bottom: 20px;
+}
+
+.pesquisa label{
+    width: auto;
+    display: flex;
+    flex-direction: column;
+    font-family: 'Sarala', sans-serif;
+    font-size: 25px;
+    font-weight: bold;
+    color: #51419A;
+}
+
+.pesquisa input{
+    width: auto;
+    padding: 5px;
+    border-radius: 30px;
+    background-color: #D9D9D9;
+    border: none;
+    padding-left: 10px;
+    font-family: 'Sarala', sans-serif;
+    font-size: 20px;
+}
+
+.container img{
+    margin-right: 50px;
+}
+
+/*DESIGN DE CONTATO*/
+#contato{
+    background-image: linear-gradient(103.95deg, #1C1F3A 0%, #060B30 0.01%, #1D0466 147.12%);
+    width: 100%;
+    height: 20%;
+}
+
+#contato header{
+    display: flex;
+    justify-content: center;
+    margin-bottom: 20px;    
+}
+
+#contato h2{
+    font-size: 30px;
+    width: 154px;
+    text-align: center;
+    border-bottom: 3px solid #fff;
+    color: #fff; 
+    padding-top: 20px;
+    font-weight: bold;
+}
+
+#contato section{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: center;
+    margin: 100px 0;
+    flex-wrap: wrap;
+}
+
+#contato p{
+    color: #fff;
+    font-size: 20px;
+    width: 290px;
+    text-align: center;
+}
+
+#telefones_contato{
+    width: 290px;
+}
+
+#telefones_contato h2{
+    font-size: 24px;
+    font-weight: bold;
+    text-align: center;
+    width: 100%;
+    border: none;
+}
+
+#telefones_contato h3{
+    font-size: 18px;
+    font-weight: bold;
+    color: #888;
+    text-align: center;
+    width: 100%;
+}
+
+#contato nav{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    width: auto;
+    padding: 20px 0;
+}
+
+#contato nav a{
+    margin: 10px;
+}
+#contato nav a:hover{
+    transform: scale(1.2);
+    transition: 0.2s ease-in;
+}
+
+/*DESIGN DO FOOTER*/
+footer{
+    width: 100%;
+    height: 400px; 
+    background-image: url(imagens/footer.png);
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+#author{
+    height: 49px;
+    width: 100%;
+    background-color: #1E1E1E;
+}
+
+#author p{
+    color: white;
+    text-align: center;
+    font-size: 18px;
+    width: 100%;
+    line-height: 49px;
+}

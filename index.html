@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="imagens/favicon.ico" type="image/x-icon">
+    <title>Finanças Online</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+
+        #mybgcarousel{ /* CSS for specific carousel container called #mybgcarousel. */
+        width:100%;
+        height:700px;
+        }
+        
+        /* ######### Shared CSS for various parts of carousel (in the event of multiple carousels) ######### */
+        
+        div.bgcarousel{ /* shared CSS for main carousel container */
+        background: black url(ajaxload.gif) center center no-repeat; /* loading gif while caoursel is loading */
+        }
+        
+        div.bgcarousel img.navbutton{ /* CSS for the nav buttons */
+        }
+        
+        div.bgcarousel div.slide{ /* CSS for each image's DIV container within main container */
+        background-color: black;
+        background-position: center center; /* center image within carousel */
+        background-repeat: no-repeat;
+        background-size: cover; /* CSS3 property to scale image within container? "cover" or "contain" */
+        color: black;
+        }
+        
+        div.bgcarousel div.selectedslide{ /* CSS for currently selected slide */
+        }
+        
+        div.bgcarousel div.slide div.desc{ /* DIV that contains the textual description inside .slide */
+        position: absolute;
+        color: #060b30;
+        left: 50px;
+        top: 50px;
+        width:250px;
+        padding: 10px;
+        font-weight: bold;
+        font-size: 30px;
+        z-index:5;
+        }
+        
+        div.bgcarousel div.selectedslide div.desc{ /* CSS for currently selected slide's desc div */
+        }
+        
+        div.bgcarousel div.slide div.desc h2{
+        font-size:150%;
+        margin:0;
+        }
+        
+        div.bgcarousel div.slide div.desc a{
+        color: #060b30;
+        text-decoration:none;
+        }
+    </style>
+
+        <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+        <script src="jquery.velocity.min.js"></script>
+        <script type="text/javascript" src="jquery.touchSwipe.min.js"></script>
+        
+        <script src="bgcarousel.js" type="text/javascript">
+        
+        /***********************************************
+        * Background Image Carousel- (c) Dynamic Drive (www.dynamicdrive.com)
+        * Please keep this notice intact
+        * Visit http://www.dynamicdrive.com/ for this script and 100s more.
+        ***********************************************/
+        
+        </script>
+        
+        <script type="text/javascript">
+        
+        var firstbgcarousel=new bgCarousel({
+            wrapperid: 'mybgcarousel', //ID of blank DIV on page to house carousel
+            imagearray: [
+                ['documento.jpg', 'Consulte a situação da certidão informando o código'], //["image_path", "optional description"]
+                ['pagamento.jpg', 'Confirme se o seu documento já foi pago para evitar pagamentos em duplicidade'],
+                ['processos.jpg', 'Verifique como está o andamento do seu processo de forma rápida']
+            ],
+            displaymode: {type:'auto', pause:3000, cycles:2, stoponclick:false, pauseonmouseover:true},
+            navbuttons: ['left.gif', 'right.gif', 'up.gif', 'down.gif'], // path to nav images
+            activeslideclass: 'selectedslide', // CSS class that gets added to currently shown DIV slide
+            orientation: 'h', //Valid values: "h" or "v"
+            persist: true, //remember last viewed slide and recall within same session?
+            slideduration: 500 //transition duration (milliseconds)
+        })
+    </script>
+</head>
+<body>
+    <header id="body_header">
+        <img id="logo" src="imagens/logo.png">
+        <nav>
+            <ul id="menu">
+                <li class="item_menu"><a href="#home_principal" target="_self">Sobre</a></li>
+                <li class="item_menu"><a href="#goservicos" target="_self">Serviços</a></li>
+                <li class="item_menu"><a href="#consultas" target="_self">Consultas</a></li>
+                <li class="item_menu"><a href="#gocontato" target="_self">Contato</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <video title="Video player" controls frameborder="0"><source src=FinancasOnline-video.mp4 type="video/mp4"></video>
+        <div id="container_conteudo">
+            <p>Bem-vindo(a) ao portal finanças online! Que tal assistir o vídeo ao lado para conhecer todas as funcionalidades? O melhor de tudo é que você realiza esses serviços na comodidade da sua casa.</p>
+            <img src="imagens/Arrow.png" alt="seta para a esquerda que aponta para o vídeo">
+        </div>
+    </main>
+    <section id="servicos">
+        <header class="section_header" id="goservicos">
+            <h2>Serviços</h2>
+        </header>
+        <div>
+            <figure id="icone1">
+                <a href="https://www.guarulhos.sp.gov.br/article/prefeitura-da-inicio-devolucao-da-taxa-do-lixo-aos-contribuintes-guarulhenses#:~:text=Em%20decreto%20publicado%20nesta%20segunda,setembro%20por%20determina%C3%A7%C3%A3o%20de%20lei"><img src="imagens/TaxaAmbiental.png" id="primeiro"></a>
+                <figcaption>Taxa Ambiental</figcaption>
+            </figure>
+            <figure id=icone2> 
+                <a href="https://www.guarulhos.sp.gov.br/cartadeservicos/fazenda/divida-ativa"><img src="imagens/Parcelamento.png" id="segundo"></a>
+                <figcaption>Parcelamento Dívida Ativa</figcaption>
+            </figure>
+            <figure id="icone3">
+                <a href="https://fazenda.guarulhos.sp.gov.br/apex/guarulho/f?p=628:LOGIN::::::"><img src="imagens/Pagamento.png" id="terceiro"></a>
+                <figcaption>Pgto. à Vista Dívida Ativa</figcaption>
+            </figure>
+            <figure id="icone4">
+                <a href="https://fazenda.guarulhos.sp.gov.br/apex/guarulho/f?p=628%3A9%3A0"><img src="imagens/2Via.png" id="quarto"></a>
+                <figcaption>2ª Via de Tributos</figcaption>
+            </figure>
+            <figure id="icone5">
+                <a href="http://fazenda.guarulhos.sp.gov.br/apex/guarulho/f?p=628%3A9"><img src="imagens/Extrato.png" id="quinto"></a>
+                <figcaption>Extrato de Débitos</figcaption>
+            </figure>
+            <figure id="icone6">
+                <a href="https://www.guarulhos.sp.gov.br/cartadeservicos/fazenda/itbi"><img src="imagens/Guia.png" id="sexto"></a>
+                <figcaption>Guia de ITBI</figcaption>
+            </figure>
+            <figure id="icone7">
+                <a href="https://www.guarulhos.sp.gov.br/cartadeservicos/fazenda-trabalho/mei-microempreendedor-individual"><img src="imagens/MEI.png" id="setimo"></a>   
+                <figcaption>MEI</figcaption>
+            </figure>
+            <figure id="icone8">
+                <a href="https://fazenda.guarulhos.sp.gov.br/apex/guarulho/f?p=628:LOGIN::::::"><img src="imagens/Comprovante.png" id="oitavo"></a>
+                <figcaption>Comprovante de Inscrição</figcaption>
+            </figure>
+            <figure id="icone9">
+                <a href="http://servicos.guarulhos.sp.gov.br:8080/portalGuarulhos/formulario/ConsultaFormularios.do?id_grupo_formulario=21"><img src="imagens/Formulario.png" id="nono"></a>
+                <figcaption>Formulários</figcaption>
+            </figure>
+            <figure id="icone10">
+                <a href=http://servicos.guarulhos.sp.gov.br:8080/portalGuarulhos/Home.do"><img src="imagens/Achar.png" id="decimo"></a>
+                <figcaption>Achar Fácil</figcaption>
+            </figure>
+            <figure id="icone11">
+                <a href="https://www.guarulhos.sp.gov.br/cartadeservicos/fazenda/certidao-de-tributos-mobiliarios"><img src="imagens/Certidão.png" id="decimo_primeiro"></a>
+                <figcaption>Certidão</figcaption>
+            </figure>
+            <figure id="icone12">
+                <a href="https://fazenda.guarulhos.sp.gov.br/apex/guarulho/f?p=628:33:::NO:::"><img src="imagens/Cálculo.png" id="decimo_segundo"></a>
+                <figcaption>Cálculo ISSQN</figcaption>
+            </figure>
+        </div>  
+    </section>
+    <section id="consultas">
+        <div id="mybgcarousel" class="bgcarousel"></div>
+    </section>
+    <section id="contato">
+        <header class="section_header" id="gocontato">
+            <h2>Contato</h2>
+        </header>
+        <section>
+            <p>Qualquer dúvida sobre algum serviço específico não hesite em contactar-nos. Será um prazer sanar a sua dificuldade!</p>
+            <div id="telefones_contato">
+                <h2>(11) 2475-8600</h2>
+                <h3>Segunda à Sexta: 08:00 às 17:00</h3>
+                <h2>08000-551-715</h2>
+                <h3>Ouvidoria do Município de Guarulhos</h3>
+            </div>
+        </section>
+        <nav> 
+           <a href="mailto:atendimentofacil@guarulhos.sp.gov.br"><img src="imagens/footer_email.png"></a>
+           <a href="https://www.facebook.com/PrefeituraGuarulhosOficial/?locale=pt_BR"><img src="imagens/footer_facebook.png"></a>
+           <a href="https://goo.gl/maps/if7LLwjerSQAfEg76"><img src="imagens/footer_location.png"></a>
+           <a href="https://br.linkedin.com/company/prefeitura-de-guarulhos"><img src="imagens/footer_linkedin.png"></a>
+           <a href="https://www.instagram.com/prefeituraguarulhosoficial/"><img src="imagens/footer_instagram.png"></a>
+        </nav>
+    </section>
+    <footer>
+        <img src="imagens/brasao.png" alt="Brasão da prefeitura de guarulhos">
+    </footer>
+    <div id="author">
+        <p>&copy; 2023  Copyright - Leet 1337</p>
+    <div> 
+</body>
+</html>
